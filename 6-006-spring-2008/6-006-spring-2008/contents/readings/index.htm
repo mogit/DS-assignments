@@ -1,0 +1,537 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>MIT OpenCourseWare | Electrical Engineering and Computer Science | 6.006 Introduction to Algorithms, Spring 2008 | Readings</title>
+<!-- Begin Automatic Metadata Insertion --><meta content="6-006-introduction-to-algorithms-spring-2008" name="WT.cg_n">
+<meta content="Readings" name="WT.cg_s">
+<meta content="Readings" name="Title">
+<meta content="This section provides the list of readings assigned for the lecture sessions." name="Description">
+<meta content="Demaine, Erik" name="Author">
+<meta content="Rivest, Ronald" name="Author">
+<meta content="Devadas, Srinivas" name="Author">
+<meta content="algorithms,python,python cost model,binary search trees,hashing,sorting,searching,shortest paths,dynamic programming,numerics,document distance,longest common substring,dijkstra,fibonacci,image resizing,chaining,hash functions,priority queues,breadth first search,depth first search,memoization,dynamic programming,divide and conquer" name="Keyword">
+<meta content="" name="Version">
+<meta content="6.006 Introduction to Algorithms | Readings" name="Search_Display">
+<!-- End Automatic Metadata Insertion --><link title="default" rel="stylesheet" type="text/css" href="../../common/styles/common.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/jquery.bubblepopup.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/courses.css">
+<link href="http://ocw.mit.edu/xml/ocwcc.rdf" type="application/rdf+xml" rel="metadata">
+<script type="text/javascript" src="../../common/scripts/common-utils-offline.js"></script><script type="text/javascript" src="../../common/scripts/jquery.bubblepopup.min.js"></script><script type="text/javascript" src="../../common/scripts/bubble-popup-offline.js"></script>
+</head>
+<body id="home">
+        <a href="#main" class="skip" tabindex="-1">skip to content</a> <a id="top"></a>
+        <div id="container">
+            
+            
+                
+	
+
+
+<div id="portletwrapper-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572" class="portletWrapper kssattr-portlethash-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572">
+<div class="portletStaticText portlet-static-site-header"><div id="page_header">
+<div class="logo"><h1><a href="http://ocw.mit.edu/"><img height="36" width="289" alt="MIT OpenCourseWare" src="../../common/images/logo-ocw-home_new.gif"></a></h1></div>     <div class="header_links">
+<div class="newsletter_icon"><a href="http://ocw.mit.edu/jsp/subscribe.jsp?utm_source=header"><img alt="Subscribe to OCW's newsletter." title="Subscribe to OCW's newsletter." src="../../common/images/newsletter.png"></a></div>         <div class="social_media_icons">
+<a style="float: left;" href="http://twitter.com/mitocw"><img alt="Follow OCW on Twitter." title="Follow OCW on Twitter." src="../../common/images/twitter.png"></a>             <a style="float: right;" href="http://facebook.com/mitocw"><img alt="Follow OCW on Facebook." title="Follow OCW on Facebook." src="../../common/images/facebook.png"></a>
+</div>
+</div>
+</div></div>
+
+</div>
+
+
+
+
+
+<div id="primary_nav">
+<ul id="nav">
+<li class="">
+<a href="http://ocw.mit.edu/">Home</a>
+    </li>
+	<li class="first active">
+<a href="http://ocw.mit.edu/courses/">Courses</a>
+    </li>
+	<li class="">
+<a href="http://ocw.mit.edu/donate">Donate</a>
+    </li>
+	<li class="">
+<a href="http://ocw.mit.edu/about/">About OCW</a>
+    </li>
+    
+   
+</ul>
+<!-- begin search area, inputs are placed inside div blocks to validate xhtml strict --><form method="get" action="../../common/search/AdvancedSearch.htm">
+<div class="searchform">
+    <input type="text" onblur="fillSearchBox()" onfocus="clearSearchBox()" maxlength="255" value="Enter search keyword" name="q" class="search" id="terms"><input type="image" alt="Go" src="../../common/images/go_new.gif" name="btnG" class="but"><a href="../../common/search/AdvancedSearch.htm">Advanced Search</a>
+</div>
+</form>
+<!-- end search area -->
+<ul id="secondary_nav">
+<li class="first"><a href="http://ocw.mit.edu/help">Help</a></li>
+    <li><a href="../../common/jsp/feedback.htm">Contact Us</a></li>
+</ul>
+<!-- end Primary Nav -->
+</div>
+
+            
+            
+            <div id="main">
+                
+                <div id="local_navigation">
+                    
+
+
+
+
+<div class="get_started">
+	<ul>
+<li><a href="http://ocw.mit.edu/courses">VIEW ALL COURSES</a></li>
+	</ul>
+</div>
+
+<script language="javascript" type="text/javascript">
+function toggleMenu(objID) {
+  if (!document.getElementById) return;
+  var ob = document.getElementById(objID);
+  ob.className = (ob.className == 'selected')?'': 'selected';
+}
+
+function toggleClass(id)
+{
+  var divtoggleClass= document.getElementById(id);
+  divtoggleClass.className = (divtoggleClass.className == 'mO')?'mC': 'mO';
+  return false;
+}
+function changeAlt(id)
+{
+  id.alt = (id.alt == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+  id.title = (id.title == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+}
+</script><!--Left Nav Starts --><div class="get_started">
+	    
+	        <div>
+               <ul>
+<li> 
+		           <a href="../../contents/index.htm" class="">Course Home</a>
+		        </li>
+                </ul>
+</div>
+	        
+		
+	    
+	        <div>
+               <ul>
+<li> 
+		           <a href="../../contents/syllabus/index.htm" class="">Syllabus</a>
+		        </li>
+                </ul>
+</div>
+	        
+		
+	    
+	        <div>
+               <ul>
+<li> 
+		           <a href="../../contents/calendar/index.htm" class="">Calendar</a>
+		        </li>
+                </ul>
+</div>
+	        
+		
+	    
+	        <div>
+               <ul>
+<li> 
+		           <a href="../../contents/readings/index.htm" class="selected">Readings</a>
+		        </li>
+                </ul>
+</div>
+	        
+		
+	    
+	        <div>
+               <ul>
+<li> 
+		           <a href="../../contents/lecture-notes/index.htm" class="">Lecture Notes</a>
+		        </li>
+                </ul>
+</div>
+	        
+		
+	    
+	        <div>
+               <ul>
+<li> 
+		           <a href="../../contents/recitations/index.htm" class="">Recitations</a>
+		        </li>
+                </ul>
+</div>
+	        
+		
+	    
+	        <div>
+               <ul>
+<li> 
+		           <a href="../../contents/assignments/index.htm" class="">Assignments</a>
+		        </li>
+                </ul>
+</div>
+	        
+		
+	    
+	        <div>
+               <ul>
+<li> 
+		           <a href="../../contents/exams/index.htm" class="">Exams</a>
+		        </li>
+                </ul>
+</div>
+	        
+		
+	    
+	        <div>
+               <ul>
+<li> 
+		           <a href="../../contents/related-resources/index.htm" class="">Related Resources</a>
+		        </li>
+                </ul>
+</div>
+	        
+		
+	    
+	        <div>
+               <ul></ul>
+</div>
+	        
+		
+	</div>
+	
+
+<!--Left Nav Ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+                
+                               
+                <div id="content_body">
+        <div class="page_links">
+            <div class="breadcrumb">
+                <div id="portal-breadcrumbs">
+
+    <a href="http://ocw.mit.edu/">Home</a>
+    <span class="breadcrumbSeparator">
+        &gt;
+        
+    </span>
+    <span dir="ltr">
+        
+            <a href="http://ocw.mit.edu/courses">Courses</a>
+            <span class="breadcrumbSeparator">
+                &gt;
+                
+            </span>
+            
+         
+    </span>
+    <span dir="ltr">
+        
+            <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science">Electrical Engineering and Computer Science</a>
+            <span class="breadcrumbSeparator">
+                &gt;
+                
+            </span>
+            
+         
+    </span>
+    <span dir="ltr">
+        
+            <a href="../../contents/index.htm">Introduction to Algorithms</a>
+            <span class="breadcrumbSeparator">
+                &gt;
+                
+            </span>
+            
+         
+    </span>
+    <span dir="ltr">
+        
+            
+            
+            <span>Readings</span>
+         
+    </span>
+</div>
+
+            </div>
+        </div>
+        <div id="main_content_course">
+            <div id="courses_inner">
+                <h1>
+        <span class="" id="parent-fieldname-title">
+            Readings
+        </span>
+    </h1>
+                <div class="clear"></div>
+                <div class="mod8">
+                    
+                    
+        <div class="" id="parent-fieldname-text">
+            
+
+<p>In the table below, readings listed as CLRS are taken from the course textbook:</p>
+<p><a href="http://www.amazon.com/exec/obidos/ASIN/0262032937/ref=nosim/mitopencourse-20"><img src="../../common/images/a_logo_17.gif" alt="Amazon logo" align="absMiddle" border="0"></a> Cormen, Thomas, Charles Leiserson, Ronald Rivest, and Clifford Stein. <a href="http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=8570"><em>Introduction to Algorithms</em></a>. 2nd ed. Cambridge, MA: MIT Press, 2001. ISBN: 9780262032933.</p>
+<div class="maintabletemplate">
+<table class="tablewidth75" summary="See table caption for summary.">
+<caption class="invisible">Course readings.</caption>
+<thead><tr>
+<th scope="col">LEC #</th>
+<th scope="col">TOPICS</th>
+<th scope="col">READINGS</th>
+</tr></thead>
+<tbody>
+<tr class="row">
+<td colspan="3"><strong>Introduction and document distance</strong></td>
+</tr>
+<tr class="alt-row">
+<td>L1</td>
+<td>Introduction and document distance</td>
+<td>CLRS, chapters 1-3</td>
+</tr>
+<tr class="row">
+<td>L2</td>
+<td>More document distance, mergesort</td>
+<td>CLRS, sections 11.1-11.2</td>
+</tr>
+<tr class="alt-row">
+<td colspan="3"><strong>Binary search trees</strong></td>
+</tr>
+<tr class="row">
+<td>L3</td>
+<td>Airplane scheduling, binary search trees</td>
+<td>CLRS, chapter 10 and sections 12.1-12.3</td>
+</tr>
+<tr class="alt-row">
+<td>L4</td>
+<td>Balanced binary search trees</td>
+<td>CLRS, sections 13.1 and 13.2 for a different approach (red-black trees)</td>
+</tr>
+<tr class="row">
+<td colspan="3"><strong>Hashing</strong></td>
+</tr>
+<tr class="alt-row">
+<td>L5</td>
+<td>Hashing I: chaining, hash functions</td>
+<td><br></td>
+</tr>
+<tr class="row">
+<td>L6</td>
+<td>Hashing II: table doubling, Karp-Rabin</td>
+<td>CLRS, chapter 17 and section 32.2</td>
+</tr>
+<tr class="alt-row">
+<td>L7</td>
+<td>Hashing III: open addressing</td>
+<td>CLRS, section 11.4 (and 11.3.3 and 11.5 if interested)</td>
+</tr>
+<tr class="row">
+<td colspan="3"><strong>Sorting</strong></td>
+</tr>
+<tr class="alt-row">
+<td>L8</td>
+<td>Sorting I: heaps</td>
+<td>CLRS, sections 2.1-2.3 and 6.1-6.2</td>
+</tr>
+<tr class="row">
+<td>L9</td>
+<td>Sorting II: heaps</td>
+<td>CLRS, sections 6.1-6.4</td>
+</tr>
+<tr class="alt-row">
+<td>L10</td>
+<td>Sorting III: lower bounds, linear-time sorting</td>
+<td>CLRS, sections 8.1-8.4</td>
+</tr>
+<tr class="row">
+<td>L11</td>
+<td>Sorting IV: stable sorting, radix sort</td>
+<td><br></td>
+</tr>
+<tr class="alt-row">
+<td colspan="3"><strong>Searching</strong></td>
+</tr>
+<tr class="row">
+<td>L12</td>
+<td>Searching I: graph search, representations, and applications</td>
+<td>CLRS, sections 22.1-22.3 and B.4</td>
+</tr>
+<tr class="alt-row">
+<td>L13</td>
+<td>Searching II: breadth-first search and depth-first search</td>
+<td>CLRS, sections 22.2-22.3</td>
+</tr>
+<tr class="row">
+<td>L14</td>
+<td>Searching III: topological sort and NP-completeness</td>
+<td>CLRS, sections 22.4 and 34.1-34.3 (at a high level)</td>
+</tr>
+<tr class="alt-row">
+<td colspan="3"><strong>Shortest paths</strong></td>
+</tr>
+<tr class="row">
+<td>L15</td>
+<td>Shortest paths I: intro</td>
+<td>CLRS, chapter 24 (intro)</td>
+</tr>
+<tr class="alt-row">
+<td>L16</td>
+<td>Shortest paths II: Bellman-Ford</td>
+<td><br></td>
+</tr>
+<tr class="row">
+<td>L17</td>
+<td>Shortest paths III: Dijkstra</td>
+<td>CLRS, sections 24.2-24.3</td>
+</tr>
+<tr class="alt-row">
+<td>L18</td>
+<td>Shortest paths IV: Dijkstra speedups</td>
+<td>
+<p><a href="http://www.amazon.com/exec/obidos/ASIN/3540709177/ref=nosim/mitopencourse-20"><img src="../../common/images/a_logo_17.gif" alt="Amazon logo" align="absMiddle" border="0"></a> Wagner, Dorothea, and Thomas Willhalm. "Speed-Up Techniques for Shortest-Path Computations." In <em>Lecture Notes in Computer Science: Proceedings of the 24th Annual Symposium on Theoretical Aspects of Computer Science</em>. Berlin / Heidelberg: Springer, 2007. ISBN: 9783540709176. Read up to section 3.2.</p>
+</td>
+</tr>
+<tr class="row">
+<td colspan="3"><strong>Dynamic programming</strong></td>
+</tr>
+<tr class="alt-row">
+<td>L19</td>
+<td>Dynamic programming I: memoization, Fibonacci, Crazy Eights, guessing</td>
+<td>CLRS, chapter 15</td>
+</tr>
+<tr class="row">
+<td>L20</td>
+<td>Dynamic programming II: longest common subsequence, parent pointers</td>
+<td><br></td>
+</tr>
+<tr class="alt-row">
+<td>L21</td>
+<td>Dynamic programming III: text justification, parenthesization, knapsack, pseudopolynomial time, Tetris training</td>
+<td><br></td>
+</tr>
+<tr class="row">
+<td>L22</td>
+<td>Dynamic programming IV: piano fingering, structural DP (trees), vertex cover, dominating set, and beyond</td>
+<td>
+<p>For fun, see papers on piano fingering and polyphonic piano fingering via DP:</p>
+<p>Parncutt, Richard, et al. "An Ergonomic Model of Keyboard Fingering for Melodic Fragments." <em>Music Perception</em> 14, no. 4 (1997): 341-382.</p>
+<p>Al Kasimi, Alia, Eric Nichols, and Christopher Raphael. "A Simple Algorithm for Automatic Generation of Polyphonic Piano Fingerings." In <em>Proceedings of the 8th International Conference on Music Information Retrieval</em>, 2007, pp. 355-356.</p>
+<p>For fun, watch the <a href="http://erikdemaine.org/metamorphosis/">Metamorphosis of the Cube</a> video, which illustrates a folding DP.</p>
+</td>
+</tr>
+<tr class="alt-row">
+<td colspan="3"><strong>Numerics</strong></td>
+</tr>
+<tr class="row">
+<td>L23</td>
+<td>Numerics I</td>
+<td><br></td>
+</tr>
+<tr class="alt-row">
+<td>L24</td>
+<td>Numerics II</td>
+<td><br></td>
+</tr>
+<tr class="row">
+<td colspan="3"><strong>Beyond 6.006</strong></td>
+</tr>
+<tr class="alt-row">
+<td>L25</td>
+<td>Beyond 6.006: follow-on classes, geometric folding algorithms</td>
+<td><br></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+            
+        </div>
+    
+                    
+
+
+
+
+
+                    
+                    
+                    
+                    
+        <div class="" id="parent-fieldname-bottomtext">
+            
+            
+        </div>
+    
+                                       
+                </div>
+<!-- mod8 ends -->
+            </div>
+<!-- courses_inner ends -->
+            
+        </div>
+<!-- main_content_course ends -->
+      </div>
+<!-- content_body END -->
+                                
+            </div>
+<!-- main end -->
+            <div id="footer">
+                
+<div id="portletwrapper-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572" class="portletWrapper kssattr-portlethash-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572">
+<div class="portletStaticText portlet-static-site-footer"><div class="footer">
+<div class="footer_logo">
+<a href="http://web.mit.edu"> 
+<img width="65" height="35" align="top" title="MIT Logo" src="../../common/images/trans.gif" alt="MIT Logo"></a>  
+<a href="../../common/terms/index.htm"> 
+<img width="100" height="13" align="top" title="Copyright MIT" src="../../common/images/trans.gif" alt="Copyright MIT"></a>
+</div>
+<div class="footer_links">
+<ul>
+<li class="first">
+<a href="http://ocw.mit.edu/about/rss/">
+<img width="32" height="15" align="absbottom" src="../../common/images/footer_rss_new.gif" alt="RSS Feeds"></a> 
+<a href="http://ocw.mit.edu/about/rss/">RSS Feeds</a>
+</li>
+    <li><a href="../../common/terms/index.htm">Privacy and Terms of Use</a></li>
+    <li><a href="http://ocw.mit.edu/help/site-map/">Site Map</a></li>
+    <li><a href="http://ocw.mit.edu/help/faq-cite-ocw-content/">Cite OCW Content</a></li>
+</ul>
+<p>Your use of the MIT OpenCourseWare site and course materials is subject to our Creative Commons License and other terms  of use.</p>
+<!-- end footer links -->
+</div>
+<div class="license">
+<a class="first" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/" rel="license" target="_blank"><img width="80" height="15" src="../../common/images/cc_logo_new.gif" alt="Creative Commons - some rights reserved"></a><br><a class="first" href="http://www.ocwconsortium.org/" target="_blank">
+<img width="80" height="44" src="../../common/images/ocw-logo_new.gif" alt="OCW Consortium"></a>
+</div>
+</div></div>
+
+</div>
+
+
+
+
+
+                
+            </div>
+<!-- footer end -->
+        </div>
+<!-- container end -->    
+      </body>
+</html>
